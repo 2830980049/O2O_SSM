@@ -1,0 +1,4 @@
+2020-06-23 15:25:50.321 [http-nio-8080-exec-4] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-23 15:25:50.390 [http-nio-8080-exec-4] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-23 15:25:50.509 [http-nio-8080-exec-4] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-23 15:25:50.519 [http-nio-8080-exec-4] DEBUG com.edu.o2o.controller.AreaController - costTime:[1873ms]

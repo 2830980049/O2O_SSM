@@ -14,5 +14,8 @@
         <module>O2O_Web</module>
     </modules>
 
+    <properties>
+        <spring.version>5.1.5.RELEASE</spring.version>
+    </properties>
 
 </project>
