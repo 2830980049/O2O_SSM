@@ -1,6 +1,7 @@
 package com.edu.o2o.dao;
 
 import com.edu.o2o.entity.Shop;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 /**

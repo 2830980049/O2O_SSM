@@ -1,4 +1,4 @@
-package com.edu.o2o.util;
+package util;
 
 import net.coobird.thumbnailator.Thumbnails;
 import net.coobird.thumbnailator.geometry.Positions;
@@ -47,6 +47,7 @@ public class ImageUtil {
      * @return
      * @throws IOException
      */
+    // targetAddr文件存储路径
     public static String generateThumbnail(File file, String targetAddr) throws IOException {
         // 获取文件名
         String realFileName = getRandomFileName();
@@ -54,12 +55,12 @@ public class ImageUtil {
         String extension = getFileExtension(file);
         // 创建保存文件夹
         makeDirPath(targetAddr);
-        // 得到文件路径
+        // 得到文件相对路径  /N/666.hpg
         String relativeAddr = targetAddr + realFileName + extension;
         // 写入日志
         logger.debug("current relativeAddr is :"+ relativeAddr);
-
-        File dest = new File(PathUtil.getImgBasePath() + relativeAddr);
+        // 文件路径 D:/image/N/666.hpg
+        File dest = new File(relativeAddr);
         // 写入日志
         logger.debug("current complete addr is:"+PathUtil.getImgBasePath() + relativeAddr);
         try {
@@ -106,12 +107,11 @@ public class ImageUtil {
     }
 
     /**
-     * 创建目标路径所涉及到的目录，即 /home/work/xiangze/xxx.jpg
+     * 创建目标路径所涉及到的目录，如 D:/SUSU/N/
      * 那么 home work xiangze 这三个文件夹都自动创建
      */
     public static void makeDirPath(String targetAddr){
-        String realFileParentPath = PathUtil.getImgBasePath() + targetAddr;
-        File dirPath = new File(realFileParentPath);
+        File dirPath = new File(targetAddr);
         if (!dirPath.exists())
             dirPath.mkdirs();
     }

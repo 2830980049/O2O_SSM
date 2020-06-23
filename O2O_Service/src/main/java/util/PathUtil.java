@@ -1,4 +1,4 @@
-package com.edu.o2o.util;
+package util;
 
 /**
  * @author Wuqili
@@ -6,6 +6,7 @@ package com.edu.o2o.util;
  * @date 2020/6/23 19:15
  */
 public class PathUtil {
+
     // file.seperator 文件分隔符
     private static String seperator = System.getProperty("file.separator");
     public static String getImgBasePath(){
@@ -13,7 +14,7 @@ public class PathUtil {
         String os = System.getProperty("os.name");
         String basePath = "";
         if(os.toLowerCase().startsWith("win")){
-            basePath = "D/O2O/image/";
+            basePath = "D:/O2O/image/";
         }
         else
             basePath = "/home/O2O/image/";
@@ -21,8 +22,9 @@ public class PathUtil {
         return basePath;
     }
 
+    // 店铺存储路径
     public static String getShopImagePath(long shopId){
-        String imagePath = "/upload/item/shop/" + shopId + "/";
+        String imagePath = "upload/item/shop/" + shopId + "/";
         return imagePath.replace("/", seperator);
     }
 }
