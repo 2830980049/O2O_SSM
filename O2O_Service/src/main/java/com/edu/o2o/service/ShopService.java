@@ -4,6 +4,7 @@ import com.edu.o2o.dto.ShopExecution;
 import com.edu.o2o.entity.Shop;
 
 import java.io.File;
+import java.io.InputStream;
 
 /**
  * @author Wuqili
@@ -11,5 +12,6 @@ import java.io.File;
  * @date 2020/6/24 0:09
  */
 public interface ShopService {
-    ShopExecution addShop(Shop shop, File shopImg);
+    // inputStream 无法获取文件名字
+    ShopExecution addShop(Shop shop, InputStream shopInputStream,String fileName);
 }

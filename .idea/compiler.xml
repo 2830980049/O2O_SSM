@@ -11,5 +11,6 @@
         <module name="o2o_Dao" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel target="8" />
   </component>
 </project>

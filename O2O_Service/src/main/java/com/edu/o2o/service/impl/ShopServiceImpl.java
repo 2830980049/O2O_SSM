@@ -14,6 +14,7 @@ import util.PathUtil;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.Date;
 
 /**
@@ -28,7 +29,7 @@ public class ShopServiceImpl implements ShopService {
     private ShopDao shopDao;
 
     @Transactional //事务标签
-    public ShopExecution addShop(Shop shop, File shopImg) {
+    public ShopExecution addShop(Shop shop, InputStream shopImgInputStream, String fileName) {
         if (shop == null) {
             if(shop.getArea() == null)
                 return new ShopExecution((ShopStateEnum.NULL_SHOPAREA));
@@ -47,10 +48,10 @@ public class ShopServiceImpl implements ShopService {
                 throw new ShopOperationException("店铺创建失败");
             }
             else{
-                if (shopImg != null){
+                if (shopImgInputStream != null){
                     //存储图片
                     try {
-                        addShopImg(shop, shopImg);
+                        addShopImg(shop, shopImgInputStream, fileName);
                     }catch (Exception e){
                         throw new ShopOperationException("addShopImg error:"+e.getMessage());
                     }
@@ -70,15 +71,15 @@ public class ShopServiceImpl implements ShopService {
         return new ShopExecution(ShopStateEnum.CHECK, shop);
     }
 
-    private void addShopImg(Shop shop, File shopImg) {
+    private void addShopImg(Shop shop, InputStream shopImgInputStream,String fileName) {
         //获取shop图片目录的相对子路径
         String dest_1 = PathUtil.getImgBasePath();
         String dest_2 = dest_1+PathUtil.getShopImagePath(shop.getShopId());
         System.out.println("dest "+dest_2);
-        System.out.println("shopImg " + shopImg);
+        System.out.println("shopImgInputStream " + shopImgInputStream);
         try {
             //// 文件路径 D:/image/N/666.hpg
-            String shopImgAddr = ImageUtil.generateThumbnail(shopImg, dest_2);
+            String shopImgAddr = ImageUtil.generateThumbnail(shopImgInputStream, dest_2,fileName);
             shop.setShopImg(shopImgAddr);
             System.out.println("shopImgAddr "+shopImgAddr);
         } catch (IOException e) {

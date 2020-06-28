@@ -9,6 +9,7 @@ import org.springframework.web.multipart.commons.CommonsMultipartFile;
 import javax.imageio.ImageIO;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Random;
@@ -42,17 +43,17 @@ public class ImageUtil {
 
     /**
      * 处理缩略图，并返回新生成图片的相对值路径
-     * @param file
+     * @param shopImgInputStream
      * @param targetAddr
      * @return
      * @throws IOException
      */
     // targetAddr文件存储路径
-    public static String generateThumbnail(File file, String targetAddr) throws IOException {
+    public static String generateThumbnail(InputStream shopImgInputStream, String targetAddr,String fileName) throws IOException {
         // 获取文件名
         String realFileName = getRandomFileName();
         // 获取后缀名
-        String extension = getFileExtension(file);
+        String extension = getFileExtension(fileName);
         // 创建保存文件夹
         makeDirPath(targetAddr);
         // 得到文件相对路径  /N/666.hpg
@@ -72,7 +73,7 @@ public class ImageUtil {
              *  加水印 watermark(位置，水印图，透明度)
              *  outputQuality 压缩
              */
-            Thumbnails.of(file).size(200,200)
+            Thumbnails.of(shopImgInputStream).size(200,200)
                     .watermark(Positions.BOTTOM_RIGHT,
                             ImageIO.read(new File(basePath + "/watermark.jpg")),
                             0.25f)
@@ -100,9 +101,9 @@ public class ImageUtil {
      * 获取输入文件流扩展名
      * @return
      */
-    public static String getFileExtension(File cfile){
+    public static String getFileExtension(String cfile){
         //获取文件名
-        String originalFileName = cfile.getName();
+        String originalFileName = cfile;
         return  originalFileName.substring(originalFileName.lastIndexOf("."));
     }
 

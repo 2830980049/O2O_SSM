@@ -1,4 +1,12 @@
-2020-06-23 15:25:50.321 [http-nio-8080-exec-4] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
-2020-06-23 15:25:50.390 [http-nio-8080-exec-4] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
-2020-06-23 15:25:50.509 [http-nio-8080-exec-4] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
-2020-06-23 15:25:50.519 [http-nio-8080-exec-4] DEBUG com.edu.o2o.controller.AreaController - costTime:[1873ms]
+2020-06-28 22:45:49.064 [http-nio-8080-exec-22] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-28 22:45:49.145 [http-nio-8080-exec-22] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-28 22:45:49.271 [http-nio-8080-exec-22] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-28 22:45:49.283 [http-nio-8080-exec-22] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-28 22:45:49.283 [http-nio-8080-exec-22] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-28 22:45:49.360 [http-nio-8080-exec-22] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-28 22:47:08.617 [http-nio-8080-exec-25] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-28 22:47:08.617 [http-nio-8080-exec-25] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-28 22:47:08.697 [http-nio-8080-exec-25] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-28 22:47:08.698 [http-nio-8080-exec-25] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-28 22:47:08.698 [http-nio-8080-exec-25] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-28 22:47:08.776 [http-nio-8080-exec-25] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2

@@ -12,6 +12,9 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
 import java.util.Date;
 
 /**
@@ -25,7 +28,7 @@ public class ShopServiceTest {
     @Autowired
     private ShopService shopService;
     @Test
-    public void testAddShop(){
+    public void testAddShop() throws FileNotFoundException {
         Shop shop = new Shop();
         PersonInfo personInfo = new PersonInfo();
         Area area = new Area();
@@ -36,14 +39,15 @@ public class ShopServiceTest {
         shop.setPersonInfo(personInfo);
         shop.setArea(area);
         shop.setShopCategory(shopCategory);
-        shop.setShopName("测试店铺_2");
-        shop.setShopDesc("test2");
-        shop.setShopAddr("test2");
+        shop.setShopName("测试店铺_3");
+        shop.setShopDesc("test3");
+        shop.setShopAddr("test3");
         shop.setCreateTime(new Date());
         shop.setEnableStatus(ShopStateEnum.CHECK.getState());
         shop.setAdvice("审核中");
         File shopImg = new File("C:/Users/asus/Pictures/1.jpg");
-        ShopExecution se = shopService.addShop(shop, shopImg);
+        InputStream is = new FileInputStream(shopImg);
+        ShopExecution se = shopService.addShop(shop,is,shopImg.getName());
         System.out.println(se.getStateInfo());
     }
 }
