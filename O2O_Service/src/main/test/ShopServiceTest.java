@@ -50,4 +50,16 @@ public class ShopServiceTest {
         ShopExecution se = shopService.addShop(shop,is,shopImg.getName());
         System.out.println(se.getStateInfo());
     }
+
+
+    @Test
+    public void updateTest() throws FileNotFoundException {
+        Shop shop = new Shop();
+        shop.setShopId(59L);
+        shop.setShopName("VN666");
+        File shopImg = new File("C:/Users/asus/Pictures/1.jpg");
+        InputStream is = new FileInputStream(shopImg);
+        ShopExecution shopExecution = shopService.updateShop(shop,is,"1.jpg");
+        System.out.println(shopExecution);
+    }
 }

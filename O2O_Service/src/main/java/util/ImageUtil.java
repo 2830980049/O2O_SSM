@@ -117,6 +117,25 @@ public class ImageUtil {
             dirPath.mkdirs();
     }
 
+    /**
+     * path 是文件的路径则删除该文件
+     * path 是目录路径则删除该目录下的所有文件
+     * @param path
+     */
+    public static void deleteFileOrPath(String path){
+        File fileOrPath = new File( path);
+        if (fileOrPath.exists()){
+            if (fileOrPath.isDirectory()){
+                File files[] = fileOrPath.listFiles();
+                for (int i = 0; i < files.length; i++)
+                    files[i].delete();
+            }
+            fileOrPath.delete();
+            System.out.println("fileOrPath "+fileOrPath);
+        }
+    }
+
+
 
     public static void main(String[] args) {
         System.out.println(basePath);

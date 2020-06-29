@@ -1,26 +1,27 @@
-
 // 实现前后端分离 解耦
 $(function () {
-//    获取店铺分类
-    var initUrl = '/o2o/shopadmin/getshopinitinfo';
-    var registerShopUrl = '/o2o/shopadmin/registershop';
-    alert(initUrl);
-    getShopInitInfo();
-    function getShopInitInfo(){
+    //    获取店铺分类
+    var shopId = getShopId('shopId');
+    var isEdit = shopId ? true : false;
+    var initUrl = '/shopadmin/getshopinitinfo';
+    var registerShopUrl = '/shopadmin/registershop';
+    var shopInfoUrl = '/shopadmin/getshopById?shopId='+shopId;
+    var editShopUrl = '/shopadmin/updateShop';
+    getShopInitInfo(shopId);
+    function getShopInitInfo(shopId){
         //  获取JSON $getJSON（访问URL，回调方法）
-        $.getJSON(initUrl, function (data) {
+        $.getJSON((isEdit?shopInfoUrl : initUrl), function (data) {
             if (data.success){
-                alert(data)
                 var temp = '';
                 var tempArea = '';
                 //  获取 shopCategoryList参数
                 data.ShopCategoryList.map(function (item, index) {
                     temp += '<option data-id="' + item.shopCategoryId + '">' +
-                            item.shopCategoryName + '</option>';
+                        item.shopCategoryName + '</option>';
                 });
                 data.areaList.map(function (item, index) {
-                   tempArea +=  '<option data-id="' + item.areaId + '">' +
-                                item.areaName + '</option>'
+                    tempArea +=  '<option data-id="' + item.areaId + '">' +
+                        item.areaName + '</option>'
                 });
                 // 填充
                 $('#shop-category').html(temp);
@@ -58,19 +59,29 @@ $(function () {
         }
         //var checks = document.getElementById();
         if(count != 5){
-            alert("请完善信息!");
+            alert("请完善信息");
+            // Swal.fire({
+            //     icon: 'error',
+            //     title: '请完善信息',
+            //     text: '信息不全'
+            // });
             return;
         }
         formData.append('shopImg', shopImg);
         formData.append('shopStr',JSON.stringify(shop));
         var check_code = $('#checks').val();
         if(!check_code){
-            alert("请输入验证码！");
+            alert("请输入验证码");
+            // Swal.fire({
+            //     icon: 'error',
+            //     title: '请输入验证码',
+            //     text: '请输入验证码'
+            // });
             return;
         }
         formData.append('check_code', check_code);
         $.ajax({
-            url : registerShopUrl,
+            url : (isEdit?editShopUrl : registerShopUrl),
             type : 'post',
             data : formData,
             contentType : false,
@@ -78,9 +89,21 @@ $(function () {
             cache : false,
             success:function (data) {
                 if(data.success)
-                    alert('提交成功！');
+                    alert("提交成功");
+                    // Swal.fire({
+                    //     position: 'center',
+                    //     icon: 'success',
+                    //     title: '提交成功',
+                    //     showConfirmButton: false,
+                    //     timer: 1500
+                    // });
                 else
-                    alert('提交失败！' + data.errMsg);
+                    alert("提交失败");
+                    // Swal.fire({
+                    //     icon: 'error',
+                    //     title: '提交失败',
+                    //     text: data.errMsg
+                    // });
                 $('#check_img').click();
             }
         });

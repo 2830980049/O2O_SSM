@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.4//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.edu.o2o.dao.ShopDao">
+    <resultMap id="shopmap" type="com.edu.o2o.entity.Shop">
+        <id property="shopId" column="shop_id"/>
+        <result property="shopName" column="shop_name"/>
+        <result property="shopDesc" column="shop_desc"/>
+        <result property="shopAddr" column="shop_addr"/>
+        <result property="phone" column="phone"/>
+        <result property="shopImg" column="shop_img"/>
+        <result property="priority" column="priority"/>
+        <result property="createTime" column="create_time"/>
+        <result property="lastEditTime" column="last_edit_time"/>
+        <result property="enableStatus" column="enable_status"/>
+        <result property="advice" column="advice"/>
+        <association property="area" column="area_id" javaType="com.edu.o2o.entity.Area">
+            <id column="area_id" property="areaId"/>
+            <result property="areaName" column="area_name"/>
+        </association>
+        <association property="shopCategory" column="shop_category_id" javaType="com.edu.o2o.entity.ShopCategory">
+            <id column="shop_category_id" property="shopCategoryId"/>
+            <result column="shop_category_name" property="shopCategoryName"/>
+        </association>
+    </resultMap>
+
 <!--  keyColumn     数据库表的主键
       keyProperty   实体类的属性
 -->
@@ -31,4 +53,68 @@
         </set>
         where shop_id=#{shopId}
     </update>
+    
+    <select id="queryByShopId" resultMap="shopmap" parameterType="Long">
+        select s.*,a.area_id,a.area_name,c.shop_category_id,c.shop_category_name
+         from tb_shop s, tb_shop_category c,tb_area a
+         where s.area_id=a.area_id and
+         s.shop_category_id = c.shop_category_id and
+         s.shop_id = #{shopId}
+    </select>
+
+    <select id="queryShopList" resultMap="shopmap">
+        select s.*,a.area_id,a.area_name,sc.shop_category_id,sc.shop_category_name
+         from tb_shop s, tb_shop_category sc,tb_area a
+        <where>
+            <if test="shopCondition.shopCategory != null and
+                      shopCondition.shopCategory.shopCategoryId != null">
+                and s.shop_category_id = #{shopCondition.shopCategory.shopCategoryId}
+            </if>
+            <if test="shopCondition.area != null and
+                      shopCondition.area.areaId != null">
+                and s.area_id = #{shopCondition.area.areaId}
+            </if>
+            <if test="shopCondition.shopName != null">
+                and s.shop_name like '%${shopCondition.shopName}%'
+            </if>
+            <if test="shopCondition.enableStatus != null">
+                and s.enable_status = #{shopCondition.enableStatus}
+            </if>
+            <if test="shopCondition.personInfo != null and shopCondition.personInfo.userId != null">
+                and s.owner_id = #{shopCondition.personInfo.userId}
+            </if>
+            and s.area_id = a.area_id
+            and s.shop_category_id = sc.shop_category_id
+        </where>
+        ORDER  BY
+        s.priority DESC
+        LIMIT #{rowIndex},#{pageSize}
+    </select>
+
+    <select id="queryShopCount" resultType="int">
+        select count(1) from tb_shop s, tb_shop_category sc,tb_area a
+        <where>
+            <if test="shopCondition.shopCategory != null and
+                      shopCondition.shopCategory.shopCategoryId != null">
+                and s.shop_category_id = #{shopCondition.shopCategory.shopCategoryId}
+            </if>
+            <if test="shopCondition.area != null and
+                      shopCondition.area.areaId != null">
+                and s.area_id = #{shopCondition.area.areaId}
+            </if>
+            <if test="shopCondition.shopName != null">
+                and s.shop_name like '%${shopCondition.shopName}%'
+            </if>
+            <if test="shopCondition.enableStatus != null">
+                and s.enable_status = #{shopCondition.enableStatus}
+            </if>
+            <if test="shopCondition.personInfo != null and
+                      shopCondition.personInfo.userId != null">
+                and s.owner_id = #{shopCondition.personInfo.userId}
+            </if>
+            and s.area_id = a.area_id
+            and s.shop_category_id = sc.shop_category_id
+        </where>
+    </select>
+
 </mapper>

@@ -12,6 +12,7 @@ import com.edu.o2o.service.AreaService;
 import com.edu.o2o.service.ShopCategoryService;
 import com.edu.o2o.service.ShopService;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.sun.org.apache.regexp.internal.RE;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -51,7 +52,7 @@ public class ShopManagerController {
 
     @RequestMapping(value = "/getshopinitinfo", method = RequestMethod.GET)
     @ResponseBody
-    private Map<String,Object> getshopinitinfo(){
+    public Map<String,Object> getshopinitinfo(){
         Map<String,Object> modelMap = new HashMap<String, Object>();
         List<ShopCategory> ShopCategoryList = new ArrayList<ShopCategory>();
         List<Area> areas = new ArrayList<Area>();
@@ -71,7 +72,7 @@ public class ShopManagerController {
 
     @RequestMapping(value = "/registershop", method = RequestMethod.POST)
     @ResponseBody
-    private Map<String,Object> registerShop(HttpServletRequest request){
+    public Map<String,Object> registerShop(HttpServletRequest request){
         Map<String,Object> modelMap = new HashMap<String,Object>();
 
         if (!CodeUtil.check_code(request)){
@@ -111,15 +112,21 @@ public class ShopManagerController {
         System.out.println(shop);
         // 2. 注册店铺
         if (shop != null && shopImg != null){
-            PersonInfo owner = new PersonInfo();
-            owner.setUserId(1L);
+            PersonInfo owner = (PersonInfo)request.getSession().getAttribute("user");
             shop.setPersonInfo(owner);
             // getOriginalFilename 获取 文件名字
             ShopExecution se = null;
             try {
                 se = shopService.addShop(shop, shopImg.getInputStream(), shopImg.getOriginalFilename());
-                if (se.getState() == ShopStateEnum.CHECK.getState())
-                    modelMap.put("success",true);
+                if (se.getState() == ShopStateEnum.CHECK.getState()) {
+                    modelMap.put("success", true);
+                    // 该用户可以操作的店铺列表
+                    List<Shop> shopList = (List<Shop>)request.getSession().getAttribute("shopList");
+                    if (shopList == null || shopList.size() == 0)
+                        shopList = new ArrayList<Shop>();
+                    shopList.add(se.getShop());
+                    request.getSession().setAttribute("shopList",shopList);
+                }
                 else{
                     modelMap.put("success",false);
                     modelMap.put("errMsg", se.getStateInfo());
@@ -133,6 +140,94 @@ public class ShopManagerController {
         else {
             modelMap.put("success",false);
             modelMap.put("errMsg", "请输入店铺信息");
+            return modelMap;
+        }
+    }
+
+    @RequestMapping(value = "/getshopById", method = RequestMethod.GET)
+    @ResponseBody
+    public Map<String,Object> getShopById(HttpServletRequest request){
+        Map<String,Object> modelMap = new HashMap<String,Object>();
+        Long shopId = HttpServletRequestUtil.getLong(request,"shopId");
+        if (shopId > -1){
+            try {
+                Shop shop = shopService.getByShopId(shopId);
+                List<Area> areaList = areaService.getAreal();
+                modelMap.put("shop",shop);
+                modelMap.put("areaList",areaList);
+                modelMap.put("success",true);
+            }
+            catch (Exception e){
+                modelMap.put("success",false);
+                modelMap.put("errMsg",e.toString());
+            }
+        }
+        else {
+            modelMap.put("success",false);
+            modelMap.put("errMsg","empty shopId");
+        }
+        return modelMap;
+    }
+
+    @RequestMapping(value = "/updateShop", method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String,Object> updateShop(HttpServletRequest request){
+        Map<String,Object> modelMap = new HashMap<String,Object>();
+
+        if (!CodeUtil.check_code(request)){
+            modelMap.put("success",false);
+            modelMap.put("errMsg", "验证码错误！");
+            return modelMap;
+        }
+        // 1. 接收并转化相应参数，包括店铺信息以及图片信息
+        String shopStr = HttpServletRequestUtil.getString(request,"shopStr");
+        // JSON对象
+        ObjectMapper mapper = new ObjectMapper();
+        Shop shop = null;
+        try {
+            // JSON 转化为实体类
+            shop = mapper.readValue(shopStr,Shop.class);
+        }
+        catch (Exception e){
+            modelMap.put("success",false);
+            modelMap.put("errMsg", e.getMessage());
+            return modelMap;
+        }
+        CommonsMultipartFile shopImg = null;
+        // 文化解析
+        CommonsMultipartResolver commonsMultipartResolver = new CommonsMultipartResolver(
+                request.getSession().getServletContext());
+        // 判断request是否有文件流
+        if (commonsMultipartResolver.isMultipart(request)){
+            MultipartHttpServletRequest multipartHttpServletRequest = (MultipartHttpServletRequest)request;
+            // 获取前端文件
+            shopImg = (CommonsMultipartFile)multipartHttpServletRequest.getFile("shopImg");
+        }
+        System.out.println(shop);
+        // 2. 修改店铺
+        if (shop != null && shop.getShopId() != null){
+            // getOriginalFilename 获取 文件名字
+            ShopExecution se = null;
+            try {
+                if (shopImg == null)
+                    se = shopService.updateShop(shop,null,null);
+                else
+                    se = shopService.updateShop(shop, shopImg.getInputStream(), shopImg.getOriginalFilename());
+                if (se.getState() == ShopStateEnum.SUCCESS.getState())
+                    modelMap.put("success",true);
+                else{
+                    modelMap.put("success",false);
+                    modelMap.put("errMsg", se.getStateInfo());
+                }
+            } catch (IOException e) {
+                modelMap.put("success",false);
+                modelMap.put("errMsg", e.getMessage());
+            }
+            return modelMap;
+        }
+        else {
+            modelMap.put("success",false);
+            modelMap.put("errMsg", "请输入店铺ID");
             return modelMap;
         }
     }

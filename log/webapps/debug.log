@@ -397,3 +397,626 @@
 2020-06-29 15:34:02.763 [http-nio-80-exec-2] DEBUG com.edu.o2o.dao.ShopDao.updateShop - ==>  Preparing: update tb_shop SET shop_name=?, shop_desc=?, shop_addr=?, phone=?, shop_img=?, create_time=?, last_edit_time=?, enable_status=?, area_id=?, shop_category_id=? where shop_id=? 
 2020-06-29 15:34:02.764 [http-nio-80-exec-2] DEBUG com.edu.o2o.dao.ShopDao.updateShop - ==> Parameters: À’À’(String), (String), πÊ‘Ú(String), 11111111111(String), D:\O2O\image\upload\item\shop\58\2020062915340262330.jpg(String), 2020-06-29 15:34:02.599(Timestamp), 2020-06-29 15:34:02.599(Timestamp), 0(Integer), 3(Integer), 14(Long), 58(Long)
 2020-06-29 15:34:02.920 [http-nio-80-exec-2] DEBUG com.edu.o2o.dao.ShopDao.updateShop - <==    Updates: 1
+2020-06-29 15:45:25.839 [http-nio-80-exec-5] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 15:45:25.878 [http-nio-80-exec-5] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 15:45:26.025 [http-nio-80-exec-5] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 15:45:26.036 [http-nio-80-exec-5] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 15:45:26.036 [http-nio-80-exec-5] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 15:45:26.128 [http-nio-80-exec-5] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 15:45:27.392 [http-nio-80-exec-9] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 15:45:27.392 [http-nio-80-exec-9] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 15:45:27.478 [http-nio-80-exec-9] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 15:45:27.479 [http-nio-80-exec-9] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 15:45:27.479 [http-nio-80-exec-9] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 15:45:27.557 [http-nio-80-exec-9] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 15:46:11.712 [http-nio-80-exec-8] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 15:46:11.765 [http-nio-80-exec-8] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 15:46:11.889 [http-nio-80-exec-8] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 15:46:11.900 [http-nio-80-exec-8] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 15:46:11.900 [http-nio-80-exec-8] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 15:46:11.978 [http-nio-80-exec-8] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 15:47:52.053 [http-nio-80-exec-9] DEBUG com.edu.o2o.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop VALUES (null,?,?,?, ?,?,?,?,?, ?,?,?, ?,?) 
+2020-06-29 15:47:52.066 [http-nio-80-exec-9] DEBUG com.edu.o2o.dao.ShopDao.insertShop - ==> Parameters: 1(Long), 2(Integer), 14(Long), 1231(String), (String), 123(String), 11111222222(String), null, null, 2020-06-29 15:47:52.037(Timestamp), 2020-06-29 15:47:52.037(Timestamp), 0(Integer), null
+2020-06-29 15:47:52.226 [http-nio-80-exec-9] DEBUG com.edu.o2o.dao.ShopDao.insertShop - <==    Updates: 1
+2020-06-29 15:47:52.771 [http-nio-80-exec-9] DEBUG com.edu.o2o.dao.ShopDao.updateShop - ==>  Preparing: update tb_shop SET shop_name=?, shop_desc=?, shop_addr=?, phone=?, shop_img=?, create_time=?, last_edit_time=?, enable_status=?, area_id=?, shop_category_id=? where shop_id=? 
+2020-06-29 15:47:52.772 [http-nio-80-exec-9] DEBUG com.edu.o2o.dao.ShopDao.updateShop - ==> Parameters: 1231(String), (String), 123(String), 11111222222(String), D:\O2O\image\upload\item\shop\59\2020062915475230142.jpg(String), 2020-06-29 15:47:52.037(Timestamp), 2020-06-29 15:47:52.037(Timestamp), 0(Integer), 2(Integer), 14(Long), 59(Long)
+2020-06-29 15:47:52.932 [http-nio-80-exec-9] DEBUG com.edu.o2o.dao.ShopDao.updateShop - <==    Updates: 1
+2020-06-29 18:46:44.026 [http-nio-80-exec-9] DEBUG com.edu.o2o.dao.ShopDao.queryByShopId - ==>  Preparing: select s.*,a.area_id,a.area_name,c.shop_category_id,c.shop_category_name from tb_shop s, tb_shop_category c,tb_area a where s.area_id=a.area_id and s.shop_category_id = c.shop_category_id and s.shop_id = ? 
+2020-06-29 18:46:44.055 [http-nio-80-exec-9] DEBUG com.edu.o2o.dao.ShopDao.queryByShopId - ==> Parameters: 1(Long)
+2020-06-29 18:46:44.182 [http-nio-80-exec-9] DEBUG com.edu.o2o.dao.ShopDao.queryByShopId - <==      Total: 1
+2020-06-29 18:46:44.191 [http-nio-80-exec-9] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 18:46:44.191 [http-nio-80-exec-9] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 18:46:44.274 [http-nio-80-exec-9] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 19:34:19.023 [http-nio-80-exec-11] DEBUG com.edu.o2o.dao.ShopDao.queryByShopId - ==>  Preparing: select s.*,a.area_id,a.area_name,c.shop_category_id,c.shop_category_name from tb_shop s, tb_shop_category c,tb_area a where s.area_id=a.area_id and s.shop_category_id = c.shop_category_id and s.shop_id = ? 
+2020-06-29 19:34:19.024 [http-nio-80-exec-11] DEBUG com.edu.o2o.dao.ShopDao.queryByShopId - ==> Parameters: 1(Long)
+2020-06-29 19:42:07.269 [http-nio-80-exec-4] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 19:42:07.307 [http-nio-80-exec-4] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 19:42:07.424 [http-nio-80-exec-4] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 19:42:07.434 [http-nio-80-exec-4] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 19:42:07.434 [http-nio-80-exec-4] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 19:42:07.514 [http-nio-80-exec-4] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 19:42:09.462 [http-nio-80-exec-11] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 19:42:09.463 [http-nio-80-exec-11] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 19:42:09.544 [http-nio-80-exec-11] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 19:42:09.545 [http-nio-80-exec-11] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 19:42:09.545 [http-nio-80-exec-11] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 19:42:09.622 [http-nio-80-exec-11] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 19:42:10.586 [http-nio-80-exec-12] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 19:42:10.586 [http-nio-80-exec-12] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 19:42:10.666 [http-nio-80-exec-12] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 19:42:10.667 [http-nio-80-exec-12] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 19:42:10.667 [http-nio-80-exec-12] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 19:42:10.745 [http-nio-80-exec-12] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 19:42:11.451 [http-nio-80-exec-13] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 19:42:11.451 [http-nio-80-exec-13] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 19:42:11.530 [http-nio-80-exec-13] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 19:42:11.530 [http-nio-80-exec-13] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 19:42:11.530 [http-nio-80-exec-13] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 19:42:11.609 [http-nio-80-exec-13] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 19:42:12.687 [http-nio-80-exec-16] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 19:42:12.687 [http-nio-80-exec-16] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 19:42:12.766 [http-nio-80-exec-16] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 19:42:12.767 [http-nio-80-exec-16] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 19:42:12.767 [http-nio-80-exec-16] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 19:42:12.846 [http-nio-80-exec-16] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 19:42:51.527 [http-nio-80-exec-15] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 19:42:51.555 [http-nio-80-exec-15] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 19:42:51.665 [http-nio-80-exec-15] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 19:42:51.674 [http-nio-80-exec-15] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 19:42:51.674 [http-nio-80-exec-15] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 19:42:51.753 [http-nio-80-exec-15] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 19:42:53.365 [http-nio-80-exec-11] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 19:42:53.366 [http-nio-80-exec-11] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 19:42:53.447 [http-nio-80-exec-11] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 19:42:53.447 [http-nio-80-exec-11] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 19:42:53.448 [http-nio-80-exec-11] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 19:42:53.526 [http-nio-80-exec-11] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 19:42:54.370 [http-nio-80-exec-13] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 19:42:54.371 [http-nio-80-exec-13] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 19:42:54.449 [http-nio-80-exec-13] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 19:42:54.449 [http-nio-80-exec-13] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 19:42:54.450 [http-nio-80-exec-13] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 19:42:54.527 [http-nio-80-exec-13] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 19:42:55.151 [http-nio-80-exec-23] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 19:42:55.151 [http-nio-80-exec-23] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 19:42:55.229 [http-nio-80-exec-23] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 19:42:55.229 [http-nio-80-exec-23] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 19:42:55.229 [http-nio-80-exec-23] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 19:42:55.306 [http-nio-80-exec-23] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 19:42:56.008 [http-nio-80-exec-24] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 19:42:56.009 [http-nio-80-exec-24] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 19:42:56.085 [http-nio-80-exec-24] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 19:42:56.086 [http-nio-80-exec-24] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 19:42:56.086 [http-nio-80-exec-24] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 19:42:56.163 [http-nio-80-exec-24] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 19:54:08.303 [http-nio-80-exec-24] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 19:54:08.334 [http-nio-80-exec-24] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 19:54:08.442 [http-nio-80-exec-24] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 19:54:08.454 [http-nio-80-exec-24] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 19:54:08.455 [http-nio-80-exec-24] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 19:54:08.533 [http-nio-80-exec-24] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 19:54:11.175 [http-nio-80-exec-35] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 19:54:11.176 [http-nio-80-exec-35] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 19:54:11.256 [http-nio-80-exec-35] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 19:54:11.257 [http-nio-80-exec-35] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 19:54:11.257 [http-nio-80-exec-35] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 19:54:11.333 [http-nio-80-exec-35] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 19:54:12.106 [http-nio-80-exec-32] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 19:54:12.107 [http-nio-80-exec-32] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 19:54:12.187 [http-nio-80-exec-32] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 19:54:12.188 [http-nio-80-exec-32] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 19:54:12.188 [http-nio-80-exec-32] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 19:54:12.265 [http-nio-80-exec-32] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 20:02:02.751 [http-nio-80-exec-33] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 20:02:02.782 [http-nio-80-exec-33] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 20:02:02.892 [http-nio-80-exec-33] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 20:02:02.900 [http-nio-80-exec-33] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 20:02:02.900 [http-nio-80-exec-33] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 20:02:02.978 [http-nio-80-exec-33] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 20:02:06.108 [http-nio-80-exec-41] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 20:02:06.109 [http-nio-80-exec-41] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 20:02:06.195 [http-nio-80-exec-41] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 20:02:06.196 [http-nio-80-exec-41] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 20:02:06.196 [http-nio-80-exec-41] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 20:02:06.273 [http-nio-80-exec-41] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 20:03:06.999 [http-nio-80-exec-41] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 20:03:06.999 [http-nio-80-exec-41] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 20:03:07.083 [http-nio-80-exec-41] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 20:03:07.085 [http-nio-80-exec-41] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 20:03:07.086 [http-nio-80-exec-41] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 20:03:07.166 [http-nio-80-exec-41] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 20:06:37.379 [http-nio-80-exec-47] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 20:06:37.379 [http-nio-80-exec-47] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 20:06:37.459 [http-nio-80-exec-47] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 20:06:37.460 [http-nio-80-exec-47] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 20:06:37.460 [http-nio-80-exec-47] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 20:06:37.539 [http-nio-80-exec-47] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 20:06:39.041 [http-nio-80-exec-48] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 20:06:39.042 [http-nio-80-exec-48] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 20:06:39.124 [http-nio-80-exec-48] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 20:06:39.125 [http-nio-80-exec-48] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 20:06:39.126 [http-nio-80-exec-48] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 20:06:39.206 [http-nio-80-exec-48] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 20:06:40.088 [http-nio-80-exec-50] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 20:06:40.088 [http-nio-80-exec-50] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 20:06:40.165 [http-nio-80-exec-50] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 20:06:40.165 [http-nio-80-exec-50] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 20:06:40.165 [http-nio-80-exec-50] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 20:06:40.243 [http-nio-80-exec-50] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 20:06:40.829 [http-nio-80-exec-42] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 20:06:40.829 [http-nio-80-exec-42] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 20:06:40.910 [http-nio-80-exec-42] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 20:06:40.911 [http-nio-80-exec-42] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 20:06:40.912 [http-nio-80-exec-42] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 20:06:40.989 [http-nio-80-exec-42] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 20:06:44.830 [http-nio-80-exec-46] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 20:06:44.830 [http-nio-80-exec-46] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 20:06:44.907 [http-nio-80-exec-46] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 20:06:44.908 [http-nio-80-exec-46] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 20:06:44.908 [http-nio-80-exec-46] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 20:06:44.984 [http-nio-80-exec-46] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 20:07:06.774 [http-nio-80-exec-49] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 20:07:06.803 [http-nio-80-exec-49] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 20:07:06.911 [http-nio-80-exec-49] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 20:07:06.919 [http-nio-80-exec-49] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 20:07:06.919 [http-nio-80-exec-49] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 20:07:06.997 [http-nio-80-exec-49] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 20:07:19.457 [http-nio-80-exec-51] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 20:07:19.458 [http-nio-80-exec-51] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 20:07:19.542 [http-nio-80-exec-51] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 20:07:19.543 [http-nio-80-exec-51] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 20:07:19.543 [http-nio-80-exec-51] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 20:07:19.619 [http-nio-80-exec-51] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 20:07:20.314 [http-nio-80-exec-50] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 20:07:20.314 [http-nio-80-exec-50] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 20:07:20.399 [http-nio-80-exec-50] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 20:07:20.400 [http-nio-80-exec-50] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 20:07:20.400 [http-nio-80-exec-50] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 20:07:20.479 [http-nio-80-exec-50] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 20:07:21.210 [http-nio-80-exec-53] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 20:07:21.210 [http-nio-80-exec-53] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 20:07:21.288 [http-nio-80-exec-53] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 20:07:21.288 [http-nio-80-exec-53] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 20:07:21.288 [http-nio-80-exec-53] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 20:07:21.364 [http-nio-80-exec-53] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 20:07:21.888 [http-nio-80-exec-44] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 20:07:21.888 [http-nio-80-exec-44] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 20:07:21.966 [http-nio-80-exec-44] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 20:07:21.966 [http-nio-80-exec-44] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 20:07:21.967 [http-nio-80-exec-44] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 20:07:22.042 [http-nio-80-exec-44] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 20:07:22.625 [http-nio-80-exec-46] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 20:07:22.625 [http-nio-80-exec-46] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 20:07:22.702 [http-nio-80-exec-46] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 20:07:22.702 [http-nio-80-exec-46] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 20:07:22.703 [http-nio-80-exec-46] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 20:07:22.778 [http-nio-80-exec-46] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 20:09:29.285 [http-nio-80-exec-56] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 20:09:29.285 [http-nio-80-exec-56] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 20:09:29.361 [http-nio-80-exec-56] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 20:09:29.362 [http-nio-80-exec-56] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 20:09:29.362 [http-nio-80-exec-56] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 20:09:29.437 [http-nio-80-exec-56] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 20:09:30.220 [http-nio-80-exec-57] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 20:09:30.220 [http-nio-80-exec-57] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 20:09:30.304 [http-nio-80-exec-57] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 20:09:30.305 [http-nio-80-exec-57] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 20:09:30.305 [http-nio-80-exec-57] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 20:09:30.381 [http-nio-80-exec-57] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 20:09:31.104 [http-nio-80-exec-46] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 20:09:31.104 [http-nio-80-exec-46] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 20:09:31.181 [http-nio-80-exec-46] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 20:09:31.181 [http-nio-80-exec-46] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 20:09:31.181 [http-nio-80-exec-46] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 20:09:31.256 [http-nio-80-exec-46] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 20:09:46.181 [http-nio-80-exec-53] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 20:09:46.181 [http-nio-80-exec-53] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 20:09:46.257 [http-nio-80-exec-53] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 20:09:46.258 [http-nio-80-exec-53] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 20:09:46.258 [http-nio-80-exec-53] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 20:09:46.334 [http-nio-80-exec-53] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 20:09:47.311 [http-nio-80-exec-55] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 20:09:47.311 [http-nio-80-exec-55] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 20:09:47.387 [http-nio-80-exec-55] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 20:09:47.388 [http-nio-80-exec-55] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 20:09:47.388 [http-nio-80-exec-55] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 20:09:47.466 [http-nio-80-exec-55] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 20:18:35.343 [http-nio-80-exec-6] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 20:18:35.378 [http-nio-80-exec-6] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 20:18:35.533 [http-nio-80-exec-6] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 20:18:35.541 [http-nio-80-exec-6] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 20:18:35.541 [http-nio-80-exec-6] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 20:18:35.619 [http-nio-80-exec-6] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 20:56:12.362 [http-nio-80-exec-9] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 20:56:12.399 [http-nio-80-exec-9] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 20:56:12.521 [http-nio-80-exec-9] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 20:56:12.530 [http-nio-80-exec-9] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 20:56:12.530 [http-nio-80-exec-9] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 20:56:12.612 [http-nio-80-exec-9] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 20:56:14.390 [http-nio-80-exec-2] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 20:56:14.391 [http-nio-80-exec-2] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 20:56:14.472 [http-nio-80-exec-2] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 20:56:14.473 [http-nio-80-exec-2] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 20:56:14.473 [http-nio-80-exec-2] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 20:56:14.551 [http-nio-80-exec-2] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 21:01:50.928 [http-nio-80-exec-10] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 21:01:50.957 [http-nio-80-exec-10] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 21:01:51.066 [http-nio-80-exec-10] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 21:01:51.075 [http-nio-80-exec-10] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 21:01:51.075 [http-nio-80-exec-10] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 21:01:51.153 [http-nio-80-exec-10] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 21:01:56.719 [http-nio-80-exec-5] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 21:01:56.720 [http-nio-80-exec-5] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 21:01:56.810 [http-nio-80-exec-5] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 21:01:56.811 [http-nio-80-exec-5] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 21:01:56.811 [http-nio-80-exec-5] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 21:01:56.890 [http-nio-80-exec-5] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 21:01:57.537 [http-nio-80-exec-2] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 21:01:57.537 [http-nio-80-exec-2] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 21:01:57.618 [http-nio-80-exec-2] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 21:01:57.619 [http-nio-80-exec-2] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 21:01:57.619 [http-nio-80-exec-2] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 21:01:57.698 [http-nio-80-exec-2] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 21:01:59.857 [http-nio-80-exec-6] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 21:01:59.857 [http-nio-80-exec-6] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 21:01:59.946 [http-nio-80-exec-6] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 21:01:59.947 [http-nio-80-exec-6] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 21:01:59.948 [http-nio-80-exec-6] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 21:02:00.029 [http-nio-80-exec-6] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 21:02:31.711 [http-nio-80-exec-12] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 21:02:31.711 [http-nio-80-exec-12] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 21:02:31.796 [http-nio-80-exec-12] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 21:02:31.798 [http-nio-80-exec-12] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 21:02:31.798 [http-nio-80-exec-12] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 21:02:31.879 [http-nio-80-exec-12] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 21:02:32.760 [http-nio-80-exec-17] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 21:02:32.761 [http-nio-80-exec-17] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 21:02:32.840 [http-nio-80-exec-17] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 21:02:32.841 [http-nio-80-exec-17] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 21:02:32.841 [http-nio-80-exec-17] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 21:02:32.922 [http-nio-80-exec-17] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 21:02:34.302 [http-nio-80-exec-14] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 21:02:34.303 [http-nio-80-exec-14] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 21:02:34.382 [http-nio-80-exec-14] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 21:02:34.382 [http-nio-80-exec-14] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 21:02:34.382 [http-nio-80-exec-14] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 21:02:34.461 [http-nio-80-exec-14] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 21:02:49.463 [http-nio-80-exec-12] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 21:02:49.464 [http-nio-80-exec-12] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 21:02:49.544 [http-nio-80-exec-12] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 21:02:49.544 [http-nio-80-exec-12] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 21:02:49.544 [http-nio-80-exec-12] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 21:02:49.623 [http-nio-80-exec-12] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 21:02:51.774 [http-nio-80-exec-17] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 21:02:51.774 [http-nio-80-exec-17] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 21:02:51.858 [http-nio-80-exec-17] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 21:02:51.861 [http-nio-80-exec-17] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 21:02:51.862 [http-nio-80-exec-17] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 21:02:51.940 [http-nio-80-exec-17] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 21:02:52.513 [http-nio-80-exec-14] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 21:02:52.513 [http-nio-80-exec-14] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 21:02:52.593 [http-nio-80-exec-14] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 21:02:52.594 [http-nio-80-exec-14] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 21:02:52.595 [http-nio-80-exec-14] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 21:02:52.672 [http-nio-80-exec-14] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 21:02:53.331 [http-nio-80-exec-18] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 21:02:53.331 [http-nio-80-exec-18] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 21:02:53.407 [http-nio-80-exec-18] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 21:02:53.408 [http-nio-80-exec-18] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 21:02:53.408 [http-nio-80-exec-18] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 21:02:53.485 [http-nio-80-exec-18] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 21:03:13.161 [http-nio-80-exec-14] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 21:03:13.187 [http-nio-80-exec-14] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 21:03:13.297 [http-nio-80-exec-14] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 21:03:13.305 [http-nio-80-exec-14] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 21:03:13.305 [http-nio-80-exec-14] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 21:03:13.384 [http-nio-80-exec-14] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 21:03:13.613 [http-nio-80-exec-17] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 21:03:13.613 [http-nio-80-exec-17] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 21:03:13.695 [http-nio-80-exec-17] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 21:03:14.076 [http-nio-80-exec-17] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 21:03:14.076 [http-nio-80-exec-17] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 21:03:14.155 [http-nio-80-exec-17] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 21:03:14.746 [http-nio-80-exec-20] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 21:03:14.747 [http-nio-80-exec-20] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 21:03:14.827 [http-nio-80-exec-20] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 21:03:14.828 [http-nio-80-exec-20] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 21:03:14.828 [http-nio-80-exec-20] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 21:03:14.909 [http-nio-80-exec-20] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 21:03:15.662 [http-nio-80-exec-19] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 21:03:15.663 [http-nio-80-exec-19] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 21:03:15.746 [http-nio-80-exec-19] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 21:03:15.747 [http-nio-80-exec-19] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 21:03:15.747 [http-nio-80-exec-19] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 21:03:15.824 [http-nio-80-exec-19] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 21:03:16.452 [http-nio-80-exec-13] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 21:03:16.453 [http-nio-80-exec-13] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 21:03:16.534 [http-nio-80-exec-13] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 21:03:16.534 [http-nio-80-exec-13] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 21:03:16.535 [http-nio-80-exec-13] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 21:03:16.613 [http-nio-80-exec-13] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 21:03:17.190 [http-nio-80-exec-11] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 21:03:17.190 [http-nio-80-exec-11] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 21:03:17.274 [http-nio-80-exec-11] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 21:03:17.275 [http-nio-80-exec-11] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 21:03:17.276 [http-nio-80-exec-11] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 21:03:17.352 [http-nio-80-exec-11] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 21:04:53.388 [http-nio-80-exec-5] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 21:04:53.424 [http-nio-80-exec-5] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 21:04:53.540 [http-nio-80-exec-5] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 21:04:53.549 [http-nio-80-exec-5] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 21:04:53.549 [http-nio-80-exec-5] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 21:04:53.627 [http-nio-80-exec-5] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 21:07:37.500 [http-nio-80-exec-7] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 21:07:37.527 [http-nio-80-exec-7] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 21:07:37.637 [http-nio-80-exec-7] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 21:07:37.645 [http-nio-80-exec-7] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 21:07:37.646 [http-nio-80-exec-7] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 21:07:37.726 [http-nio-80-exec-7] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 21:07:40.042 [http-nio-80-exec-9] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 21:07:40.043 [http-nio-80-exec-9] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 21:07:40.125 [http-nio-80-exec-9] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 21:07:40.126 [http-nio-80-exec-9] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 21:07:40.126 [http-nio-80-exec-9] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 21:07:40.205 [http-nio-80-exec-9] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 21:07:41.100 [http-nio-80-exec-1] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 21:07:41.100 [http-nio-80-exec-1] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 21:07:41.179 [http-nio-80-exec-1] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 21:07:41.180 [http-nio-80-exec-1] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 21:07:41.180 [http-nio-80-exec-1] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 21:07:41.257 [http-nio-80-exec-1] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 21:07:41.927 [http-nio-80-exec-5] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 21:07:41.927 [http-nio-80-exec-5] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 21:07:42.005 [http-nio-80-exec-5] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 21:07:42.005 [http-nio-80-exec-5] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 21:07:42.005 [http-nio-80-exec-5] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 21:07:42.083 [http-nio-80-exec-5] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 21:07:43.303 [http-nio-80-exec-2] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 21:07:43.304 [http-nio-80-exec-2] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 21:07:43.384 [http-nio-80-exec-2] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 21:07:43.384 [http-nio-80-exec-2] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 21:07:43.384 [http-nio-80-exec-2] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 21:07:43.462 [http-nio-80-exec-2] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 21:07:44.313 [http-nio-80-exec-10] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 21:07:44.313 [http-nio-80-exec-10] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 21:07:44.393 [http-nio-80-exec-10] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 21:07:44.393 [http-nio-80-exec-10] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 21:07:44.393 [http-nio-80-exec-10] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 21:07:44.471 [http-nio-80-exec-10] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 21:07:45.064 [http-nio-80-exec-11] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 21:07:45.064 [http-nio-80-exec-11] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 21:07:45.143 [http-nio-80-exec-11] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 21:07:45.143 [http-nio-80-exec-11] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 21:07:45.144 [http-nio-80-exec-11] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 21:07:45.223 [http-nio-80-exec-11] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 21:07:45.996 [http-nio-80-exec-16] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 21:07:45.997 [http-nio-80-exec-16] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 21:07:46.076 [http-nio-80-exec-16] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 21:07:46.076 [http-nio-80-exec-16] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 21:07:46.076 [http-nio-80-exec-16] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 21:07:46.154 [http-nio-80-exec-16] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 21:07:46.967 [http-nio-80-exec-17] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 21:07:46.968 [http-nio-80-exec-17] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 21:07:47.047 [http-nio-80-exec-17] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 21:07:47.047 [http-nio-80-exec-17] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 21:07:47.047 [http-nio-80-exec-17] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 21:07:47.124 [http-nio-80-exec-17] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 21:07:47.900 [http-nio-80-exec-11] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 21:07:47.900 [http-nio-80-exec-11] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 21:07:47.979 [http-nio-80-exec-11] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 21:07:47.979 [http-nio-80-exec-11] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 21:07:47.979 [http-nio-80-exec-11] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 21:07:48.059 [http-nio-80-exec-11] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 21:21:00.140 [http-nio-80-exec-5] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 21:21:00.181 [http-nio-80-exec-5] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 21:21:00.336 [http-nio-80-exec-5] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 21:21:00.346 [http-nio-80-exec-5] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 21:21:00.346 [http-nio-80-exec-5] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 21:21:00.429 [http-nio-80-exec-5] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 21:21:00.619 [http-nio-80-exec-9] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 21:21:00.620 [http-nio-80-exec-9] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 21:21:00.703 [http-nio-80-exec-9] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 21:21:01.072 [http-nio-80-exec-9] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 21:21:01.072 [http-nio-80-exec-9] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 21:21:01.150 [http-nio-80-exec-9] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 21:21:09.324 [http-nio-80-exec-3] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 21:21:09.325 [http-nio-80-exec-3] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 21:21:09.406 [http-nio-80-exec-3] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 21:21:09.406 [http-nio-80-exec-3] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 21:21:09.406 [http-nio-80-exec-3] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 21:21:09.486 [http-nio-80-exec-3] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 21:21:10.508 [http-nio-80-exec-6] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 21:21:10.508 [http-nio-80-exec-6] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 21:21:10.590 [http-nio-80-exec-6] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 21:21:10.590 [http-nio-80-exec-6] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 21:21:10.590 [http-nio-80-exec-6] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 21:21:10.671 [http-nio-80-exec-6] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 21:21:11.452 [http-nio-80-exec-2] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 21:21:11.452 [http-nio-80-exec-2] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 21:21:11.535 [http-nio-80-exec-2] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 21:21:11.535 [http-nio-80-exec-2] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 21:21:11.535 [http-nio-80-exec-2] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 21:21:11.614 [http-nio-80-exec-2] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 21:21:17.738 [http-nio-80-exec-8] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 21:21:17.738 [http-nio-80-exec-8] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 21:21:17.820 [http-nio-80-exec-8] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 21:21:17.821 [http-nio-80-exec-8] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 21:21:17.821 [http-nio-80-exec-8] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 21:21:17.901 [http-nio-80-exec-8] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 21:21:18.687 [http-nio-80-exec-10] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 21:21:18.687 [http-nio-80-exec-10] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 21:21:18.769 [http-nio-80-exec-10] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 21:21:18.769 [http-nio-80-exec-10] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 21:21:18.769 [http-nio-80-exec-10] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 21:21:18.850 [http-nio-80-exec-10] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 21:21:19.458 [http-nio-80-exec-4] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 21:21:19.459 [http-nio-80-exec-4] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 21:21:19.545 [http-nio-80-exec-4] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 21:21:19.547 [http-nio-80-exec-4] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 21:21:19.549 [http-nio-80-exec-4] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 21:21:19.639 [http-nio-80-exec-4] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 21:21:33.473 [http-nio-80-exec-5] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 21:21:33.473 [http-nio-80-exec-5] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 21:21:33.555 [http-nio-80-exec-5] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 21:21:33.556 [http-nio-80-exec-5] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 21:21:33.556 [http-nio-80-exec-5] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 21:21:33.635 [http-nio-80-exec-5] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 21:21:34.184 [http-nio-80-exec-9] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 21:21:34.184 [http-nio-80-exec-9] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 21:21:34.264 [http-nio-80-exec-9] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 21:21:34.264 [http-nio-80-exec-9] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 21:21:34.265 [http-nio-80-exec-9] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 21:21:34.343 [http-nio-80-exec-9] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 21:21:34.777 [http-nio-80-exec-4] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 21:21:34.778 [http-nio-80-exec-4] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 21:21:34.860 [http-nio-80-exec-4] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 21:21:34.860 [http-nio-80-exec-4] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 21:21:34.860 [http-nio-80-exec-4] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 21:21:34.940 [http-nio-80-exec-4] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 21:21:35.518 [http-nio-80-exec-8] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 21:21:35.518 [http-nio-80-exec-8] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 21:21:35.604 [http-nio-80-exec-8] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 21:21:35.605 [http-nio-80-exec-8] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 21:21:35.605 [http-nio-80-exec-8] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 21:21:35.686 [http-nio-80-exec-8] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 21:21:36.133 [http-nio-80-exec-9] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 21:21:36.133 [http-nio-80-exec-9] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 21:21:36.219 [http-nio-80-exec-9] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 21:21:36.221 [http-nio-80-exec-9] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 21:21:36.222 [http-nio-80-exec-9] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 21:21:36.303 [http-nio-80-exec-9] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 21:21:36.787 [http-nio-80-exec-4] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 21:21:36.788 [http-nio-80-exec-4] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 21:21:36.870 [http-nio-80-exec-4] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 21:21:36.870 [http-nio-80-exec-4] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 21:21:36.870 [http-nio-80-exec-4] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 21:21:36.950 [http-nio-80-exec-4] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 21:21:37.606 [http-nio-80-exec-8] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 21:21:37.606 [http-nio-80-exec-8] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 21:21:37.689 [http-nio-80-exec-8] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 21:21:37.691 [http-nio-80-exec-8] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 21:21:37.691 [http-nio-80-exec-8] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 21:21:37.769 [http-nio-80-exec-8] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 21:21:38.295 [http-nio-80-exec-6] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 21:21:38.295 [http-nio-80-exec-6] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 21:21:38.374 [http-nio-80-exec-6] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 21:21:38.374 [http-nio-80-exec-6] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 21:21:38.374 [http-nio-80-exec-6] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 21:21:38.454 [http-nio-80-exec-6] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 21:21:38.844 [http-nio-80-exec-2] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 21:21:38.844 [http-nio-80-exec-2] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 21:21:38.927 [http-nio-80-exec-2] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 21:21:38.928 [http-nio-80-exec-2] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 21:21:38.929 [http-nio-80-exec-2] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 21:21:39.007 [http-nio-80-exec-2] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 21:45:08.066 [http-nio-80-exec-2] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 21:45:08.106 [http-nio-80-exec-2] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 21:45:08.229 [http-nio-80-exec-2] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 21:45:08.240 [http-nio-80-exec-2] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 21:45:08.240 [http-nio-80-exec-2] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 21:45:08.326 [http-nio-80-exec-2] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 21:45:44.035 [http-nio-80-exec-7] DEBUG com.edu.o2o.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop VALUES (null,?,?,?, ?,?,?,?,?, ?,?,?, ?,?) 
+2020-06-29 21:45:44.042 [http-nio-80-exec-7] DEBUG com.edu.o2o.dao.ShopDao.insertShop - ==> Parameters: null, 2(Integer), 17(Long), asda(String), (String), asda(String), 11111111111(String), null, null, 2020-06-29 21:45:44.031(Timestamp), 2020-06-29 21:45:44.031(Timestamp), 0(Integer), null
+2020-06-29 21:45:46.650 [http-nio-80-exec-8] DEBUG com.edu.o2o.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop VALUES (null,?,?,?, ?,?,?,?,?, ?,?,?, ?,?) 
+2020-06-29 21:45:46.654 [http-nio-80-exec-8] DEBUG com.edu.o2o.dao.ShopDao.insertShop - ==> Parameters: null, 2(Integer), 17(Long), asda(String), (String), asda(String), 11111111111(String), null, null, 2020-06-29 21:45:46.649(Timestamp), 2020-06-29 21:45:46.649(Timestamp), 0(Integer), null
+2020-06-29 21:46:53.670 [http-nio-80-exec-3] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 21:46:53.670 [http-nio-80-exec-3] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 21:46:53.750 [http-nio-80-exec-3] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 21:46:53.751 [http-nio-80-exec-3] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 21:46:53.751 [http-nio-80-exec-3] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 21:46:53.832 [http-nio-80-exec-3] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 21:47:38.917 [http-nio-80-exec-9] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 21:47:38.918 [http-nio-80-exec-9] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 21:47:38.999 [http-nio-80-exec-9] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 21:47:38.999 [http-nio-80-exec-9] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 21:47:38.999 [http-nio-80-exec-9] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 21:47:39.080 [http-nio-80-exec-9] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 21:47:51.716 [http-nio-80-exec-6] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 21:47:51.716 [http-nio-80-exec-6] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 21:47:51.796 [http-nio-80-exec-6] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 21:47:51.797 [http-nio-80-exec-6] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 21:47:51.797 [http-nio-80-exec-6] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 21:47:51.876 [http-nio-80-exec-6] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 21:49:07.612 [http-nio-80-exec-5] DEBUG com.edu.o2o.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop VALUES (null,?,?,?, ?,?,?,?,?, ?,?,?, ?,?) 
+2020-06-29 21:49:07.614 [http-nio-80-exec-5] DEBUG com.edu.o2o.dao.ShopDao.insertShop - ==> Parameters: null, 3(Integer), 14(Long), 1231(String), (String), 123123(String), 1231231(String), null, null, 2020-06-29 21:49:07.611(Timestamp), 2020-06-29 21:49:07.611(Timestamp), 0(Integer), null
+2020-06-29 21:50:37.353 [http-nio-80-exec-10] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 21:50:37.353 [http-nio-80-exec-10] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 21:50:37.440 [http-nio-80-exec-10] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 21:50:37.441 [http-nio-80-exec-10] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 21:50:37.441 [http-nio-80-exec-10] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 21:50:37.521 [http-nio-80-exec-10] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 21:50:39.852 [http-nio-80-exec-3] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 21:50:39.852 [http-nio-80-exec-3] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 21:50:39.938 [http-nio-80-exec-3] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 21:50:39.939 [http-nio-80-exec-3] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 21:50:39.940 [http-nio-80-exec-3] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 21:50:40.019 [http-nio-80-exec-3] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 21:50:57.283 [http-nio-80-exec-7] DEBUG com.edu.o2o.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop VALUES (null,?,?,?, ?,?,?,?,?, ?,?,?, ?,?) 
+2020-06-29 21:50:57.285 [http-nio-80-exec-7] DEBUG com.edu.o2o.dao.ShopDao.insertShop - ==> Parameters: null, 3(Integer), 14(Long), 1231(String), (String), 123(String), 1212331(String), null, null, 2020-06-29 21:50:57.283(Timestamp), 2020-06-29 21:50:57.283(Timestamp), 0(Integer), null
+2020-06-29 21:51:59.761 [http-nio-80-exec-5] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 21:51:59.812 [http-nio-80-exec-5] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 21:51:59.930 [http-nio-80-exec-5] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 21:51:59.942 [http-nio-80-exec-5] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 21:51:59.942 [http-nio-80-exec-5] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 21:52:00.022 [http-nio-80-exec-5] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 21:52:11.648 [http-nio-80-exec-6] DEBUG com.edu.o2o.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop VALUES (null,?,?,?, ?,?,?,?,?, ?,?,?, ?,?) 
+2020-06-29 21:52:11.657 [http-nio-80-exec-6] DEBUG com.edu.o2o.dao.ShopDao.insertShop - ==> Parameters: null, 3(Integer), 14(Long), 1231(String), (String), 1231(String), 12312312(String), null, null, 2020-06-29 21:52:11.639(Timestamp), 2020-06-29 21:52:11.639(Timestamp), 0(Integer), null
+2020-06-29 21:58:39.308 [http-nio-80-exec-6] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: select * from tb_shop_category WHERE parent_id is not null order by priority DESC 
+2020-06-29 21:58:39.361 [http-nio-80-exec-6] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-06-29 21:58:39.487 [http-nio-80-exec-6] DEBUG com.edu.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 15
+2020-06-29 21:58:39.496 [http-nio-80-exec-6] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 21:58:39.496 [http-nio-80-exec-6] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 21:58:39.572 [http-nio-80-exec-6] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 21:58:58.808 [http-nio-80-exec-8] DEBUG com.edu.o2o.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop VALUES (null,?,?,?, ?,?,?,?,?, ?,?,?, ?,?) 
+2020-06-29 21:58:58.814 [http-nio-80-exec-8] DEBUG com.edu.o2o.dao.ShopDao.insertShop - ==> Parameters: null, 3(Integer), 22(Long), 123(String), 123123(String), 123123(String), 1231241(String), null, null, 2020-06-29 21:58:58.804(Timestamp), 2020-06-29 21:58:58.804(Timestamp), 0(Integer), null
+2020-06-29 21:59:39.772 [http-nio-80-exec-1] DEBUG com.edu.o2o.dao.ShopDao.queryByShopId - ==>  Preparing: select s.*,a.area_id,a.area_name,c.shop_category_id,c.shop_category_name from tb_shop s, tb_shop_category c,tb_area a where s.area_id=a.area_id and s.shop_category_id = c.shop_category_id and s.shop_id = ? 
+2020-06-29 21:59:39.772 [http-nio-80-exec-1] DEBUG com.edu.o2o.dao.ShopDao.queryByShopId - ==> Parameters: 1(Long)
+2020-06-29 21:59:39.851 [http-nio-80-exec-1] DEBUG com.edu.o2o.dao.ShopDao.queryByShopId - <==      Total: 1
+2020-06-29 21:59:39.852 [http-nio-80-exec-1] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 21:59:39.852 [http-nio-80-exec-1] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 21:59:39.928 [http-nio-80-exec-1] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 22:17:35.202 [http-nio-80-exec-6] DEBUG com.edu.o2o.dao.ShopDao.queryByShopId - ==>  Preparing: select s.*,a.area_id,a.area_name,c.shop_category_id,c.shop_category_name from tb_shop s, tb_shop_category c,tb_area a where s.area_id=a.area_id and s.shop_category_id = c.shop_category_id and s.shop_id = ? 
+2020-06-29 22:17:35.203 [http-nio-80-exec-6] DEBUG com.edu.o2o.dao.ShopDao.queryByShopId - ==> Parameters: 1(Long)
+2020-06-29 22:17:40.138 [http-nio-80-exec-9] DEBUG com.edu.o2o.dao.ShopDao.queryByShopId - ==>  Preparing: select s.*,a.area_id,a.area_name,c.shop_category_id,c.shop_category_name from tb_shop s, tb_shop_category c,tb_area a where s.area_id=a.area_id and s.shop_category_id = c.shop_category_id and s.shop_id = ? 
+2020-06-29 22:17:40.139 [http-nio-80-exec-9] DEBUG com.edu.o2o.dao.ShopDao.queryByShopId - ==> Parameters: 1(Long)
+2020-06-29 22:17:59.719 [http-nio-80-exec-3] DEBUG com.edu.o2o.dao.ShopDao.queryByShopId - ==>  Preparing: select s.*,a.area_id,a.area_name,c.shop_category_id,c.shop_category_name from tb_shop s, tb_shop_category c,tb_area a where s.area_id=a.area_id and s.shop_category_id = c.shop_category_id and s.shop_id = ? 
+2020-06-29 22:17:59.720 [http-nio-80-exec-3] DEBUG com.edu.o2o.dao.ShopDao.queryByShopId - ==> Parameters: 59(Long)
+2020-06-29 22:17:59.800 [http-nio-80-exec-3] DEBUG com.edu.o2o.dao.ShopDao.queryByShopId - <==      Total: 1
+2020-06-29 22:17:59.800 [http-nio-80-exec-3] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 22:17:59.800 [http-nio-80-exec-3] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 22:17:59.878 [http-nio-80-exec-3] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 22:18:16.379 [http-nio-80-exec-5] DEBUG com.edu.o2o.dao.ShopDao.queryByShopId - ==>  Preparing: select s.*,a.area_id,a.area_name,c.shop_category_id,c.shop_category_name from tb_shop s, tb_shop_category c,tb_area a where s.area_id=a.area_id and s.shop_category_id = c.shop_category_id and s.shop_id = ? 
+2020-06-29 22:18:16.379 [http-nio-80-exec-5] DEBUG com.edu.o2o.dao.ShopDao.queryByShopId - ==> Parameters: 1(Long)
+2020-06-29 22:18:16.460 [http-nio-80-exec-5] DEBUG com.edu.o2o.dao.ShopDao.queryByShopId - <==      Total: 1
+2020-06-29 22:18:16.462 [http-nio-80-exec-5] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 22:18:16.462 [http-nio-80-exec-5] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 22:18:16.548 [http-nio-80-exec-5] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 22:20:18.680 [http-nio-80-exec-10] DEBUG com.edu.o2o.dao.ShopDao.queryByShopId - ==>  Preparing: select s.*,a.area_id,a.area_name,c.shop_category_id,c.shop_category_name from tb_shop s, tb_shop_category c,tb_area a where s.area_id=a.area_id and s.shop_category_id = c.shop_category_id and s.shop_id = ? 
+2020-06-29 22:20:18.681 [http-nio-80-exec-10] DEBUG com.edu.o2o.dao.ShopDao.queryByShopId - ==> Parameters: 59(Long)
+2020-06-29 22:20:18.759 [http-nio-80-exec-10] DEBUG com.edu.o2o.dao.ShopDao.queryByShopId - <==      Total: 1
+2020-06-29 22:20:18.759 [http-nio-80-exec-10] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 22:20:18.760 [http-nio-80-exec-10] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 22:20:18.838 [http-nio-80-exec-10] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 22:27:01.122 [http-nio-80-exec-6] DEBUG com.edu.o2o.dao.ShopDao.queryByShopId - ==>  Preparing: select s.*,a.area_id,a.area_name,c.shop_category_id,c.shop_category_name from tb_shop s, tb_shop_category c,tb_area a where s.area_id=a.area_id and s.shop_category_id = c.shop_category_id and s.shop_id = ? 
+2020-06-29 22:27:01.122 [http-nio-80-exec-6] DEBUG com.edu.o2o.dao.ShopDao.queryByShopId - ==> Parameters: 59(Long)
+2020-06-29 22:27:03.655 [http-nio-80-exec-1] DEBUG com.edu.o2o.dao.ShopDao.queryByShopId - ==>  Preparing: select s.*,a.area_id,a.area_name,c.shop_category_id,c.shop_category_name from tb_shop s, tb_shop_category c,tb_area a where s.area_id=a.area_id and s.shop_category_id = c.shop_category_id and s.shop_id = ? 
+2020-06-29 22:27:03.655 [http-nio-80-exec-1] DEBUG com.edu.o2o.dao.ShopDao.queryByShopId - ==> Parameters: 59(Long)
+2020-06-29 22:27:04.374 [http-nio-80-exec-4] DEBUG com.edu.o2o.dao.ShopDao.queryByShopId - ==>  Preparing: select s.*,a.area_id,a.area_name,c.shop_category_id,c.shop_category_name from tb_shop s, tb_shop_category c,tb_area a where s.area_id=a.area_id and s.shop_category_id = c.shop_category_id and s.shop_id = ? 
+2020-06-29 22:27:04.375 [http-nio-80-exec-4] DEBUG com.edu.o2o.dao.ShopDao.queryByShopId - ==> Parameters: 59(Long)
+2020-06-29 22:27:06.498 [http-nio-80-exec-8] DEBUG com.edu.o2o.dao.ShopDao.queryByShopId - ==>  Preparing: select s.*,a.area_id,a.area_name,c.shop_category_id,c.shop_category_name from tb_shop s, tb_shop_category c,tb_area a where s.area_id=a.area_id and s.shop_category_id = c.shop_category_id and s.shop_id = ? 
+2020-06-29 22:27:06.498 [http-nio-80-exec-8] DEBUG com.edu.o2o.dao.ShopDao.queryByShopId - ==> Parameters: 59(Long)
+2020-06-29 22:27:58.859 [http-nio-80-exec-2] DEBUG com.edu.o2o.dao.ShopDao.queryByShopId - ==>  Preparing: select s.*,a.area_id,a.area_name,c.shop_category_id,c.shop_category_name from tb_shop s, tb_shop_category c,tb_area a where s.area_id=a.area_id and s.shop_category_id = c.shop_category_id and s.shop_id = ? 
+2020-06-29 22:27:58.859 [http-nio-80-exec-2] DEBUG com.edu.o2o.dao.ShopDao.queryByShopId - ==> Parameters: 59(Long)
+2020-06-29 22:27:58.939 [http-nio-80-exec-2] DEBUG com.edu.o2o.dao.ShopDao.queryByShopId - <==      Total: 1
+2020-06-29 22:27:58.939 [http-nio-80-exec-2] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==>  Preparing: select * from tb_area order by priority DESC 
+2020-06-29 22:27:58.939 [http-nio-80-exec-2] DEBUG com.edu.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-06-29 22:27:59.016 [http-nio-80-exec-2] DEBUG com.edu.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-06-29 22:28:13.720 [http-nio-80-exec-5] DEBUG com.edu.o2o.dao.ShopDao.queryByShopId - ==>  Preparing: select s.*,a.area_id,a.area_name,c.shop_category_id,c.shop_category_name from tb_shop s, tb_shop_category c,tb_area a where s.area_id=a.area_id and s.shop_category_id = c.shop_category_id and s.shop_id = ? 
+2020-06-29 22:28:13.720 [http-nio-80-exec-5] DEBUG com.edu.o2o.dao.ShopDao.queryByShopId - ==> Parameters: 59(Long)
+2020-06-29 22:28:13.800 [http-nio-80-exec-5] DEBUG com.edu.o2o.dao.ShopDao.queryByShopId - <==      Total: 1
+2020-06-29 22:28:13.882 [http-nio-80-exec-5] DEBUG com.edu.o2o.dao.ShopDao.updateShop - ==>  Preparing: update tb_shop SET shop_name=?, shop_desc=?, shop_addr=?, phone=?, shop_img=?, last_edit_time=?, area_id=?, shop_category_id=? where shop_id=? 
+2020-06-29 22:28:13.883 [http-nio-80-exec-5] DEBUG com.edu.o2o.dao.ShopDao.updateShop - ==> Parameters: VN666(String), 1245125(String), 123(String), 11111222222(String), D:\O2O\image\upload\item\shop\59\2020062922281359577.jpg(String), 2020-06-29 22:28:13.881(Timestamp), 3(Integer), 14(Long), 59(Long)
+2020-06-29 22:28:14.042 [http-nio-80-exec-5] DEBUG com.edu.o2o.dao.ShopDao.updateShop - <==    Updates: 1
+2020-06-29 22:28:14.043 [http-nio-80-exec-5] DEBUG com.edu.o2o.dao.ShopDao.queryByShopId - ==>  Preparing: select s.*,a.area_id,a.area_name,c.shop_category_id,c.shop_category_name from tb_shop s, tb_shop_category c,tb_area a where s.area_id=a.area_id and s.shop_category_id = c.shop_category_id and s.shop_id = ? 
+2020-06-29 22:28:14.045 [http-nio-80-exec-5] DEBUG com.edu.o2o.dao.ShopDao.queryByShopId - ==> Parameters: 59(Long)
+2020-06-29 22:28:14.124 [http-nio-80-exec-5] DEBUG com.edu.o2o.dao.ShopDao.queryByShopId - <==      Total: 1

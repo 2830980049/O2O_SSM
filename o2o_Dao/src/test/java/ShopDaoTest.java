@@ -10,6 +10,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.util.Date;
+import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
@@ -56,4 +57,31 @@ public class ShopDaoTest {
         int effectedNum = shopDao.updateShop(shop);
         assertEquals(1, effectedNum);
     }
+
+    @Test
+    public void testSelectI(){
+        Shop shop = new Shop();
+        shop = shopDao.queryByShopId(1L);
+        System.out.println(shop);
+    }
+
+    @Test
+    public void testQueryShopList(){
+        Shop shopCondition = new Shop();
+        PersonInfo owner = new PersonInfo();
+        owner.setUserId(1L);
+        shopCondition.setPersonInfo(owner);
+        List<Shop> shoplist = shopDao.queryShopList(shopCondition,1,5);
+        int count = shopDao.queryShopCount(shopCondition);
+        System.out.println(shoplist.size());
+        System.out.println(count);
+        ShopCategory shopCategory = new ShopCategory();
+        shopCategory.setShopCategoryId(22L);
+        shopCondition.setShopCategory(shopCategory);
+        shoplist = shopDao.queryShopList(shopCondition,0,2);
+        System.out.println(shoplist.size());
+        count = shopDao.queryShopCount(shopCondition);
+        System.out.println(count);
+    }
+
 }
