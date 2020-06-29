@@ -2,8 +2,8 @@
 // 实现前后端分离 解耦
 $(function () {
 //    获取店铺分类
-    var initUrl = '/shopadmin/getshopinitinfo';
-    var registerShopUrl = '/shopadmin/registershop';
+    var initUrl = '/o2o/shopadmin/getshopinitinfo';
+    var registerShopUrl = '/o2o/shopadmin/registershop';
     alert(initUrl);
     getShopInitInfo();
     function getShopInitInfo(){
@@ -29,12 +29,14 @@ $(function () {
         });
     }
 
+    // 提交按钮的事件响应，分别对店铺注册和编辑操作做不同响应
     $('#submit').click(function () {
+        // 创建shop对象
         var shop = {};
         shop.shopName = $('#shop-name').val();
         shop.shopAddr = $('#shop-addr').val();
         shop.phone = $('#shop-phone').val();
-        shop.Desc = $('#shop-desc').val();
+        shop.shopDesc = $('#shop-desc').val();
         shop.shopCategory = {
             shopCategoryId:$('#shop-category').find('option').not(function () {
                 return !this.selected;
@@ -46,24 +48,41 @@ $(function () {
             }).data('id')
         };
         var shopImg = $('#shop-img')[0].files[0];
-        var formData = new formData();
-        formData.append('shopImg', shopImgh);
+        var formData = new FormData();
+        var inputs = document.getElementsByTagName("input");
+        var count = 0;
+        for(var i = 0; i < inputs.length; i++){
+            var msg = inputs[i].nextElementSibling;
+            if (msg.className == "msg-success")
+                count++;
+        }
+        //var checks = document.getElementById();
+        if(count != 5){
+            alert("请完善信息!");
+            return;
+        }
+        formData.append('shopImg', shopImg);
         formData.append('shopStr',JSON.stringify(shop));
+        var check_code = $('#checks').val();
+        if(!check_code){
+            alert("请输入验证码！");
+            return;
+        }
+        formData.append('check_code', check_code);
         $.ajax({
             url : registerShopUrl,
-            type: 'POST',
-            data: formData,
-            contentType: false,
-            proceesData:false,
-            cache:false,
+            type : 'post',
+            data : formData,
+            contentType : false,
+            processData : false,
+            cache : false,
             success:function (data) {
-                if(data.success){
-                    $.toast('提交成功！');
-                }
-                else{
-                    $.toast('提交失败！' + data.errMsg);
-                }
+                if(data.success)
+                    alert('提交成功！');
+                else
+                    alert('提交失败！' + data.errMsg);
+                $('#check_img').click();
             }
-        })
+        });
     });
 });

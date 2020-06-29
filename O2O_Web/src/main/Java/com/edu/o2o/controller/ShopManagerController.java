@@ -21,6 +21,7 @@ import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
 import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 import sun.dc.pr.PRError;
+import util.CodeUtil;
 import util.HttpServletRequestUtil;
 import util.ImageUtil;
 import util.PathUtil;
@@ -69,8 +70,15 @@ public class ShopManagerController {
     }
 
     @RequestMapping(value = "/registershop", method = RequestMethod.POST)
+    @ResponseBody
     private Map<String,Object> registerShop(HttpServletRequest request){
         Map<String,Object> modelMap = new HashMap<String,Object>();
+
+        if (!CodeUtil.check_code(request)){
+            modelMap.put("success",false);
+            modelMap.put("errMsg", "验证码错误！");
+            return modelMap;
+        }
         // 1. 接收并转化相应参数，包括店铺信息以及图片信息
         String shopStr = HttpServletRequestUtil.getString(request,"shopStr");
         // JSON对象
@@ -100,7 +108,7 @@ public class ShopManagerController {
             modelMap.put("errMsg", "上传图片不能为空");
             return modelMap;
         }
-
+        System.out.println(shop);
         // 2. 注册店铺
         if (shop != null && shopImg != null){
             PersonInfo owner = new PersonInfo();

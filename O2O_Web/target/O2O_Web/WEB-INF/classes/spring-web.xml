@@ -33,4 +33,13 @@
         <property name="suffix" value=".jsp"/>
     </bean>
 
+<!--  文件上传解析器  -->
+    <bean name="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="defaultEncoding" value="utf-8"/>
+<!--     文件最大上传为20M   -->
+        <property name="maxUploadSize" value="20971520"/>
+        <!--     最大内存20M   -->
+        <property name="maxInMemorySize" value="20971520"/>
+    </bean>
+
 </beans>

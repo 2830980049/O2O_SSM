@@ -28,11 +28,15 @@
     <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/msgs.css">
     <link rel="apple-touch-icon-precomposed" href="/assets/img/apple-touch-icon-114x114.png">
-
     <script src="${pageContext.request.contextPath}/webjars/jquery/3.3.1-2/jquery.min.js"></script>
     <script src="${pageContext.request.contextPath}/js/shop/shop_add.js"></script>
-
-
+    <script>
+        function changeCode(img) {
+            // 生成 4位随机数 floor 返回小于等于x的最大整数:
+            img.src = "${pageContext.request.contextPath}/Kaptcha?" + Math.floor(Math.random() * 100);
+        }
+    </script>
+<%--    <script src="${pageContext.request.contextPath}/js/common/common.js"></script>--%>
 </head>
 <body>
 <div class="page-group">
@@ -67,7 +71,6 @@
                                 <div class="item-input">
                                     <select id="shop-category">
                                     </select>
-                                    <span class="msg-success"></span>
                                 </div>
                             </div>
                         </div>
@@ -80,7 +83,6 @@
                                 <div class="item-input">
                                     <select id="area">
                                     </select>
-                                    <span class="msg-success"></span>
                                 </div>
                             </div>
                         </div>
@@ -116,6 +118,7 @@
                                 <div class="item-title label">缩略图</div>
                                 <div class="item-input">
                                     <input type="file" id="shop-img">
+                                    <span class="msg-success"></span>
                                 </div>
                             </div>
                         </div>
@@ -132,13 +135,24 @@
                         </div>
                     </li>
 <%--                 验证码 kaptcha   --%>
-
+                    <li>
+                        <div class="item-content">
+                            <div class="item-inner">
+                                <div class="item-title label">验证码</div>
+                                <input type="text" id="checks" required>
+                                <span class="msg-success"></span>
+                                <div class="item-input">
+                                    <img src="${pageContext.request.contextPath}/Kaptcha" id="check_img" alt="点击更换" title="点击更换" onclick="changeCode(this);">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
             </div>
             <div class="content-block">
                 <div class="row">
                     <div class="col-50"><a href="#" class="button button-big button-fill button-danger">返回</a></div>
-                    <div class="col-50"><a href="#" class="button button-big button-fill button-success" id="submit" onclick="sub();">提交</a></div>
+                    <div class="col-50"><a href="#" class="button button-big button-fill button-success" id="submit" >提交</a></div>
                 </div>
             </div>
         </div>
@@ -148,23 +162,6 @@
 <script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
 <script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
 <script type="text/javascript">
-    function sub() {
-        alert('asdasd')
-        var inputs = document.getElementsByTagName("input");
-        var count = 0;
-        for(var i = 0; i < inputs.length - 1; i++){
-            var msg = inputs[i].nextElementSibling;
-            if (msg.className == "msg-success")
-                count++;
-        }
-        //var checks = document.getElementById();
-        alert(count)
-        if(count == 3){
-            document.getElementById('submit').submit();
-        }
-        else
-            alert("请完善信息!");
-    }
 
     $('#shop-name').blur(function () {
         if (this.validity.valueMissing) {
@@ -232,26 +229,6 @@
     });
     $('#shop-phone').focus(function () {
         this.nextElementSibling.innerHTML = '电话不能为空';
-        this.nextElementSibling.className = 'msg-default';
-    });
-
-    $('#shop-img').blur(function () {
-        if (this.validity.valueMissing) {
-            this.nextElementSibling.innerHTML = '缩略图不能为空';
-            this.nextElementSibling.className = 'msg-error';
-            this.setCustomValidity('缩略图不能为空');
-        }
-        else if (this.validity.tooLong) {
-            this.nextElementSibling.innerHTML = '文件不能大于1M';
-            this.nextElementSibling.className = 'msg-error';
-            this.setCustomValidity('文件不能大于1M');
-        }
-        else {
-            this.nextElementSibling.className = 'msg-success';
-        }
-    });
-    $('#shop-img').focus(function () {
-        this.nextElementSibling.innerHTML = '';
         this.nextElementSibling.className = 'msg-default';
     });
 </script>
