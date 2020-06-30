@@ -62,4 +62,15 @@ public class ShopServiceTest {
         ShopExecution shopExecution = shopService.updateShop(shop,is,"1.jpg");
         System.out.println(shopExecution);
     }
+
+    @Test
+    public void Lists(){
+        Shop shopCondition = new Shop();
+        ShopCategory shopCategory = new ShopCategory();
+        shopCategory.setShopCategoryId(22L);
+        shopCondition.setShopCategory(shopCategory);
+        ShopExecution se = shopService.getShopList(shopCondition,2,2);
+        System.out.println("店铺列表数："+se.getShopList().size());
+        System.out.println("店铺总数："+se.getCount());
+    }
 }

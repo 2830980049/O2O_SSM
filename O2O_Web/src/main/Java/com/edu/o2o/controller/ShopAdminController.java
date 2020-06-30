@@ -16,4 +16,20 @@ public class ShopAdminController {
     public String shopAdd(){
         return "shop/shop_add_update";
     }
+
+    @RequestMapping(value = "/shoplist")
+    public String shopList(){
+        return "shop/shop_list";
+    }
+
+    @RequestMapping(value = "/shopmanagement")
+    public String shopmanagement(){
+        return "shop/shopmanagement";
+    }
+
+    @RequestMapping(value = "/productcategorymanagement")
+    public String productcategorymanagement(){
+        return "shop/productcategorymanagement";
+    }
+
 }
