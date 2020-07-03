@@ -64,7 +64,6 @@
                 }
                 $('#shopInfo').attr('href', '${pageContext.request.contextPath}/shop/shop_add?shopId=' + shopId);
                 $('#shopcategory').attr('href', '${pageContext.request.contextPath}/shop/productcategorymanagement?shopId=' + shopId);
-                $('#shopmanage').attr('href', '${pageContext.request.contextPath}/shop/shop_add?shopId=' + shopId);
             }
         });
     });

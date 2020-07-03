@@ -12,10 +12,9 @@ public class Product {
     private Long productId;
     private String productName;
     private String productDesc;
-    // 简略图
-    private String imgAddr;
-    private String normalPrice;
-    private String promotionPrice;
+    private String imgAddr; // 简略图
+    private String normalPrice; //原价
+    private String promotionPrice;  //现价
     private Integer priority;
     private Date createTime;
     private Date lastEditTime;

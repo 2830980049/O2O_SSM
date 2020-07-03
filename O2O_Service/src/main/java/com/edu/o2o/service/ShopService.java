@@ -1,5 +1,6 @@
 package com.edu.o2o.service;
 
+import com.edu.o2o.dto.ImageHolder;
 import com.edu.o2o.dto.ShopExecution;
 import com.edu.o2o.entity.Shop;
 import com.edu.o2o.service.exceptions.ShopOperationException;
@@ -17,11 +18,9 @@ public interface ShopService {
      *  注册店铺信息，包括图片处理
      *  inputStream 无法获取文件名字
      * @param shop
-     * @param shopInputStream
-     * @param fileName
      * @return
      */
-    ShopExecution addShop(Shop shop, InputStream shopInputStream,String fileName) throws ShopOperationException;
+    ShopExecution addShop(Shop shop, ImageHolder imageHolder) throws ShopOperationException;
 
     /**
      * 通过店铺ID获取店铺信息
@@ -33,11 +32,9 @@ public interface ShopService {
     /**
      * 更新店铺信息，包括对图片处理
      * @param shop
-     * @param shopInputStream
-     * @param fileName
      * @return
      */
-    ShopExecution updateShop(Shop shop,InputStream shopInputStream,String fileName) throws ShopOperationException;
+    ShopExecution updateShop(Shop shop, ImageHolder imageHolder) throws ShopOperationException;
 
     /**
      *  根据ShopCondition分页返回相应店铺列表

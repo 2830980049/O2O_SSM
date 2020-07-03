@@ -1,5 +1,6 @@
 package util;
 
+import com.edu.o2o.dto.ImageHolder;
 import net.coobird.thumbnailator.Thumbnails;
 import net.coobird.thumbnailator.geometry.Positions;
 import org.slf4j.Logger;
@@ -82,6 +83,51 @@ public class ImageUtil {
         catch (IOException e){
             logger.error(e.toString());
             e.printStackTrace();
+        }
+        return relativeAddr;
+    }
+
+    /**
+     * 处理详情图，并返回新生产图片相对路径
+     * @param targetAddr
+     * @param
+     * @return
+     * @throws IOException
+     */
+    // targetAddr文件存储路径
+    public static String generateNormalImg(ImageHolder thumbnail, String targetAddr) throws IOException {
+        // 获取文件名
+        String realFileName = getRandomFileName();
+        // 获取后缀名
+        String extension = getFileExtension(thumbnail.getImageName());
+        // 创建保存文件夹
+        makeDirPath(targetAddr);
+        // 得到文件相对路径  /N/666.hpg
+        String relativeAddr = targetAddr + realFileName + extension;
+        // 写入日志
+        logger.debug("current relativeAddr is :"+ relativeAddr);
+        // 文件路径 D:/image/N/666.hpg
+        File dest = new File(relativeAddr);
+        // 写入日志
+        logger.debug("current complete addr is:"+PathUtil.getImgBasePath() + relativeAddr);
+        try {
+            /**
+             *  size(width,height) 若图片横比200小，高比300小，不变
+             *  若图片横比200小，高比300大，高缩小到300，图片比例不变 若图片横比200大，高比300小，横缩小到200，图片比例不变
+             *  若图片横比200大，高比300大，图片按比例缩小，横为200或高为300
+             *
+             *  加水印 watermark(位置，水印图，透明度)
+             *  outputQuality 压缩
+             */
+            Thumbnails.of(thumbnail.getImage()).size(350,550)
+                    .watermark(Positions.BOTTOM_RIGHT,
+                            ImageIO.read(new File(basePath + "/watermark.jpg")),
+                            0.25f)
+                    .outputQuality(0.9f).toFile(dest);
+        }
+        catch (IOException e){
+            logger.error(e.toString());
+            throw new RuntimeException("创建缩略图失败："+e.toString());
         }
         return relativeAddr;
     }

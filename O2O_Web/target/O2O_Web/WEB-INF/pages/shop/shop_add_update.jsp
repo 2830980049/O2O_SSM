@@ -24,8 +24,10 @@
 
     <!-- Google Web Fonts -->
 
-    <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
-    <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
+    <link rel="stylesheet"
+          href="${pageContext.request.contextPath}/css/sm.css">
+    <link rel="stylesheet"
+          href="${pageContext.request.contextPath}/css/sm-extend.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/msgs.css">
     <link rel="apple-touch-icon-precomposed" href="/assets/img/apple-touch-icon-114x114.png">
 
@@ -296,9 +298,12 @@
         </div>
     </div>
 </div>
-<script type='text/javascript' src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
-<script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
-<script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
+<script type='text/javascript'
+        src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+<script type='text/javascript'
+        src='${pageContext.request.contextPath}/js/dist/sm.js' charset='utf-8'></script>
+<script type='text/javascript'
+        src='${pageContext.request.contextPath}/js/dist/sm-extend.js' charset='utf-8'></script>
 <script type="text/javascript">
 
     $('#shop-name').blur(function () {

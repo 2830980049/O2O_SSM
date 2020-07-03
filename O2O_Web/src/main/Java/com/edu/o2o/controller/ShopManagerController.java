@@ -2,6 +2,7 @@ package com.edu.o2o.controller;
 
 import checkers.oigj.quals.O;
 import checkers.units.quals.A;
+import com.edu.o2o.dto.ImageHolder;
 import com.edu.o2o.dto.ShopExecution;
 import com.edu.o2o.entity.Area;
 import com.edu.o2o.entity.PersonInfo;
@@ -117,7 +118,10 @@ public class ShopManagerController {
             // getOriginalFilename 获取 文件名字
             ShopExecution se = null;
             try {
-                se = shopService.addShop(shop, shopImg.getInputStream(), shopImg.getOriginalFilename());
+                ImageHolder imageHolder = null;
+                imageHolder.setImage(shopImg.getInputStream());
+                imageHolder.setImageName(shopImg.getOriginalFilename());
+                se = shopService.addShop(shop, imageHolder);
                 if (se.getState() == ShopStateEnum.CHECK.getState()) {
                     modelMap.put("success", true);
                     // 该用户可以操作的店铺列表
@@ -210,9 +214,13 @@ public class ShopManagerController {
             ShopExecution se = null;
             try {
                 if (shopImg == null)
-                    se = shopService.updateShop(shop,null,null);
-                else
-                    se = shopService.updateShop(shop, shopImg.getInputStream(), shopImg.getOriginalFilename());
+                    se = shopService.updateShop(shop,null);
+                else {
+                    ImageHolder imageHolder = null;
+                    imageHolder.setImage(shopImg.getInputStream());
+                    imageHolder.setImageName(shopImg.getOriginalFilename());
+                    se = shopService.updateShop(shop, imageHolder);
+                }
                 if (se.getState() == ShopStateEnum.SUCCESS.getState())
                     modelMap.put("success",true);
                 else{

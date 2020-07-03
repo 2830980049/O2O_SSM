@@ -37,8 +37,10 @@ public class ProductCategoryManagementController {
     public Results<List<ProductCategory>> getProductCategoryList(HttpServletRequest request){
         Shop currentShop = (Shop)request.getSession().getAttribute("currentShop");
         List<ProductCategory> list = null;
+        System.out.println(currentShop);
         if (currentShop != null && currentShop.getShopId() > 0){
             list = productCategoryService.getProductCategoryList(currentShop.getShopId());
+            System.out.println(list);
             return new Results<List<ProductCategory>>(true,list);
         }
         else{

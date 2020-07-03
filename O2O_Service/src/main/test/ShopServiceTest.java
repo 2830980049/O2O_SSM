@@ -47,8 +47,8 @@ public class ShopServiceTest {
         shop.setAdvice("审核中");
         File shopImg = new File("C:/Users/asus/Pictures/1.jpg");
         InputStream is = new FileInputStream(shopImg);
-        ShopExecution se = shopService.addShop(shop,is,shopImg.getName());
-        System.out.println(se.getStateInfo());
+        //ShopExecution se = shopService.addShop(shop,is,shopImg.getName());
+        //System.out.println(se.getStateInfo());
     }
 
 
@@ -59,8 +59,8 @@ public class ShopServiceTest {
         shop.setShopName("VN666");
         File shopImg = new File("C:/Users/asus/Pictures/1.jpg");
         InputStream is = new FileInputStream(shopImg);
-        ShopExecution shopExecution = shopService.updateShop(shop,is,"1.jpg");
-        System.out.println(shopExecution);
+        //ShopExecution shopExecution = shopService.updateShop(shop,is,"1.jpg");
+        //System.out.println(shopExecution);
     }
 
     @Test

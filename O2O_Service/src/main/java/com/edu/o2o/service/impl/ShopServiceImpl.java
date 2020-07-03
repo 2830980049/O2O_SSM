@@ -1,6 +1,7 @@
 package com.edu.o2o.service.impl;
 
 import com.edu.o2o.dao.ShopDao;
+import com.edu.o2o.dto.ImageHolder;
 import com.edu.o2o.dto.ShopExecution;
 import com.edu.o2o.entity.Shop;
 import com.edu.o2o.enums.ShopStateEnum;
@@ -31,7 +32,7 @@ public class ShopServiceImpl implements ShopService {
     private ShopDao shopDao;
 
     @Transactional //事务标签
-    public ShopExecution addShop(Shop shop, InputStream shopImgInputStream, String fileName) throws ShopOperationException{
+    public ShopExecution addShop(Shop shop, ImageHolder imageHolder) throws ShopOperationException{
         if (shop == null) {
             if(shop.getArea() == null)
                 return new ShopExecution((ShopStateEnum.NULL_SHOPAREA));
@@ -50,10 +51,10 @@ public class ShopServiceImpl implements ShopService {
                 throw new ShopOperationException("店铺创建失败");
             }
             else{
-                if (shopImgInputStream != null){
+                if (imageHolder.getImage() != null){
                     //存储图片
                     try {
-                        addShopImg(shop, shopImgInputStream, fileName);
+                        addShopImg(shop, imageHolder);
                     }catch (Exception e){
                         throw new ShopOperationException("addShopImg error:"+e.getMessage());
                     }
@@ -73,15 +74,15 @@ public class ShopServiceImpl implements ShopService {
         return new ShopExecution(ShopStateEnum.CHECK, shop);
     }
 
-    private void addShopImg(Shop shop, InputStream shopImgInputStream,String fileName) {
+    private void addShopImg(Shop shop, ImageHolder imageHolder) {
         //获取shop图片目录的相对子路径
         String dest_1 = PathUtil.getImgBasePath();
         String dest_2 = dest_1+PathUtil.getShopImagePath(shop.getShopId());
         System.out.println("dest "+dest_2);
-        System.out.println("shopImgInputStream " + shopImgInputStream);
+        System.out.println("shopImgInputStream " + imageHolder.getImage());
         try {
             //// 文件路径 D:/image/N/666.hpg
-            String shopImgAddr = ImageUtil.generateThumbnail(shopImgInputStream, dest_2,fileName);
+            String shopImgAddr = ImageUtil.generateThumbnail(imageHolder.getImage(), dest_2,imageHolder.getImageName());
             shop.setShopImg(shopImgAddr);
             System.out.println("shopImgAddr "+shopImgAddr);
         } catch (IOException e) {
@@ -95,17 +96,17 @@ public class ShopServiceImpl implements ShopService {
     }
 
     @Override
-    public ShopExecution updateShop(Shop shop, InputStream shopInputStream, String fileName) throws ShopOperationException {
+    public ShopExecution updateShop(Shop shop, ImageHolder imageHolder) throws ShopOperationException {
         if (shop == null || shop.getShopId() == null)
             return new ShopExecution(ShopStateEnum.NULL_SHOP);
         else {
             try {
                 // 1 判断是否处理图片
-                if (shopInputStream != null && fileName != null && !"".equals(fileName)) {
+                if (imageHolder.getImage() != null && imageHolder.getImageName() != null && !"".equals(imageHolder.getImageName())) {
                     Shop tempShop = shopDao.queryByShopId(shop.getShopId());
                     if (tempShop.getShopImg() != null)
                         ImageUtil.deleteFileOrPath(tempShop.getShopImg());
-                    addShopImg(shop, shopInputStream, fileName);
+                    addShopImg(shop, imageHolder);
                 }
                 // 2 更新店铺信息
                 shop.setLastEditTime(new Date());
